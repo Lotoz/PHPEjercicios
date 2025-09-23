@@ -1,8 +1,13 @@
 # PHPEjercicios
+<!--
 <div align="center">
   <img width="20" />
    <img src="https://skillicons.dev/icons?i=php" height="60" alt="python logo"  />
   <img width="20" />
+</div>
+-->
+<div aling="center">
+  <picture href="banner.jpg"></picture>
 </div>
 
 ## Organizacion
