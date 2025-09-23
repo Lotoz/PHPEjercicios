@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./playamar.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
     <title>Ejercicio 5 - Array Asociativo</title>
 </head>
 <body>
@@ -11,7 +12,7 @@
         <h1>Array Asociativo</h1>
 
         <?php
-
+            //Se pone un clave y un valor
             const DIA_TEMP = [
                                 "lunes" => 27,
                                 "martes" => 30,
@@ -39,6 +40,26 @@
 
             echo "</ol>";
 
+            //OTRA FORMA DE DECLARARLO
+            $arrayName = array(); //Tambien para declarar array, es a gusto
+
+            //Tablaaa
+            echo "<table class='tablaEstetica' >";
+            echo "<tr><th>DIA</th><th>TEMP</th></tr>";
+            foreach (DIA_TEMP as $k => $v) {
+                echo "<tr><td>", $k, "</td> <td>", $v, "</td></tr>";;
+            }
+            echo "</table> <br/>";
+
+            ## CON CONTADOR
+            $contador = 1;
+            echo "<table class='tablaEstetica'>";
+            echo "<tr><th/><th>DIA</th><th>TEMP</th></tr>";
+            foreach (DIA_TEMP as $k => $v) {
+                echo "<tr><td>",$contador,"</td><td>", $k, "</td> <td>", $v, "</td></tr>";
+                $contador++;
+            }
+            echo "</table>";
         ?>
 
 </body>

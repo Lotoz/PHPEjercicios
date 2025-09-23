@@ -1,0 +1,4 @@
+.tablaEstetica, th, td{
+    border: purple solid 2px;
+    text-align: center;
+}

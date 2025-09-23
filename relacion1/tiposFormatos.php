@@ -16,7 +16,17 @@
         $v2 = 24;
         $v3 = true;
         $v4 = 5.34;
-
+        //Se puede darle a la constante de este modo el valor con la respuesta de algo
+        $algo = 3.1416;
+        //Constantes; esta es mas nueva y da mas libertad de que el valor puede ser no conocido hasta la ejecucion
+        const PI = $algo;
+        //Segunda forma de declarar una constante, es el modo original
+        define("NOMBRE", "LOTOZ");
+        //Se puede poner una variable con color
+        $claro = "azul";
+        // Variable de una variable dentro de otra
+        //Es para desviar y que pille otro dato, una funcion de disfurcacion de datos para variabilidad
+        $$color = $claro;
         var_dump($v1);
         var_dump($v2);
         var_dump($v3);

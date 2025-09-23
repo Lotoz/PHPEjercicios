@@ -13,6 +13,8 @@
 
     <?php
 
+    echo "DOCUMENT_ROOT", $_SERVER['DOCUMENT_ROOT'];
+
     /*
         ‘DOCUMENT-ROOT’
         ‘PHP-SELF’
@@ -30,17 +32,20 @@
 
         // muestra, en forma de lista no enumerada, para $_SERVER
         echo "<ul>";
-
+        //Las variabes que empiecen con guion bajo tiene significado especial
         foreach ($_SERVER as $k => $v) {
-            echo "<li>'", $k, "'</li>";
+            echo "<li>'", $k,"+_+", $v, "'</li>";
         }
 
-        echo "</ul><br><hr><<br>";
-
+        echo "</ul><br/><hr/><br/>";
         // volcados
         echo var_dump($_SERVER); // muestra información estructurada de expresiones, incluytendo el tipo y el valor
+        echo "<br/><hr/>";
         echo "<br><hr><br>".print_r($_SERVER); // muestra informaciñon de una variable de forma legible para humanos
 
+        //Para saber el tipo de una variable
+        //Mas especifico
+        echo "<br>Para saber el tipo de una variable:", gettype($_SERVER['DOCUMENT_ROOT']);
     ?>
 
 </body>
