@@ -7,7 +7,7 @@
 </div>
 -->
 <div aling="center">
-  <picture href="banner.jpg"></picture>
+  <img src="banner.jpg" alt="php imagen"/>
 </div>
 
 ## Organizacion
