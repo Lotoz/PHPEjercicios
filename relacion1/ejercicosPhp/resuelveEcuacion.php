@@ -10,7 +10,9 @@
     <h1>Ecuacion de segundo grado</h1>
 
     <?php
-
+        #Debemos hacer refactorizacion de codigo
+        #Controlar multiples casos.
+        #Hacer un TDD para desarollar en a favor de testing
        $valorA = 6.0;
        $valorB = 0.0;
        $valorC = -6.0;
