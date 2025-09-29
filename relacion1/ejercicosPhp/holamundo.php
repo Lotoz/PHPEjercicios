@@ -4,22 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relacion 1 - Hola mundo</title>
+    <title>Relacion 1 - Hello world</title>
     <link rel="shortcut icon" href="./playamar.png" type="image/x-icon">
 </head>
 
 <body>
-    <h1>Hola mundo en php</h1>
-    <h3 style='color:purple'>
+    <!-- Texto plano HTML -->
+    Hello world
+
+    <!-- Encabezado de nivel 2 HTML -->
+    <h2>
         <?php
-        $nombre = "Zamira"; //Declaracion de variable,  de tipo (lo deduce, no es fuertemente tipado)
-        echo "Hola $nombre <br/>"; // Una variable entre comillas dobles es sustituida por su valor
-        echo 'Hola mundo <br/>'; // Puedo usar comillas simples para el eco
-        echo 'Hola $nombre <br>'; //Pero como haya variables se debe utilizar comilla doble o
-        echo 'Hola ', $nombre, '<br/>'; // Asi detecta la variable y se deba agregar el espacio manualmente porque si no, no lo detecta
-        echo "Hola ", strtoupper($nombre); //Se declara asi en mayuscula
+        echo "Hello world";
         ?>
-    </h3>
+    </h2>
+
+    <!-- Párrafo con estilo -->
+    <p style="color: teal; font-family: Arial, sans-serif; text-align: center; font-size: 20px;">
+        <?php
+        echo "Hello world";
+        ?>
+    </p>
+
+    <!-- Salto de línea entre hello y world -->
+    <p>
+        <?php
+        echo "Hello<br>world";
+        ?>
+    </p>
+
+    <!-- Información sobre la instalación PHP -->
+    <h3>Información de PHP</h3>
+    <p>Versión de PHP:
+        <?php
+        echo phpversion();
+        ?>
+    </p>
+    <details>
+        <summary>Mostrar phpinfo()</summary>
+        <?php
+        phpinfo();
+        ?>
+    </details>
+
+    <!-- Fecha y hora del sistema -->
+    <h3>Fecha y hora actual</h3>
+    <p>
+        <?php
+        // Muestra la fecha y hora actual del sistema
+        echo date("d/m/Y H:i:s");
+        ?>
+    </p>
+
+    <!-- Comentarios en PHP -->
+    <?php
+    // Comenatario 1
+
+    /*
+    Comenatario 2
+    */
+    ?>
 </body>
 
 </html>
