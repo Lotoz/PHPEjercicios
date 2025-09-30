@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./playamar.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/relacion1/playamar.png" type="image/x-icon">
     <title>Tipos y Formatos</title>
 </head>
 <body>
@@ -17,16 +17,16 @@
         $v3 = true;
         $v4 = 5.34;
         //Se puede darle a la constante de este modo el valor con la respuesta de algo
-        $algo = 3.1416;
+        //Se puede poner en pi  para apuntar $algo = 3.1416;
         //Constantes; esta es mas nueva y da mas libertad de que el valor puede ser no conocido hasta la ejecucion
-        const PI = $algo;
+        const PI = 3.1416;
         //Segunda forma de declarar una constante, es el modo original
         define("NOMBRE", "LOTOZ");
         //Se puede poner una variable con color
         $claro = "azul";
         // Variable de una variable dentro de otra
         //Es para desviar y que pille otro dato, una funcion de disfurcacion de datos para variabilidad
-        $$color = $claro;
+        //$$color = $claro;
         var_dump($v1);
         var_dump($v2);
         var_dump($v3);

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./playamar.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/relacion1/playamar.png" type="image/x-icon">
     <title>Ecuacion de segundo grado</title>
 </head>
 
@@ -12,13 +12,12 @@
     <h1>Ecuacion de segundo grado</h1>
 
     <?php
-    $valorA = 6.0;
-    $valorB = 0.0;
-    $valorC = -6.0;
-    if ($valorA == 0 && $valorB == 0 && $valorC == 0) {
-        echo "La ecuación tiene infinitas soluciones.";
-    } else if ($valorA == 0 && $valorB == 0) {
-        echo "La ecuación no tiene solución.";
+    $valorA = 4.0;
+    $valorB = 8.0;
+    $valorC = 0.0;
+
+    if ($valorA == 0 && $valorB == 0) {
+        echo "No es una ecuacion.";
     } else if ($valorA == 0) {
         #Hacer otra solucion
         $calculo = - ($valorC) / $valorB;
@@ -35,7 +34,7 @@
             echo "La segunda raiz es: ", round($raiz, 2);
         }
     } else if ($valorC == 0) {
-        $calculo = $valorA * ($valorA + $valorB);
+        $calculo = - $valorB / $valorA;
         echo "Tiene 2 raices:
                 Raiz = 0 <br/>
                 Raiz2 =", round($calculo, 2);

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relacion 1 - Hello world</title>
-    <link rel="shortcut icon" href="./playamar.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/relacion1/playamar.png" type="image/x-icon">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
     </h2>
 
     <!-- Párrafo con estilo -->
-    <p style="color: teal; font-family: Arial, sans-serif; text-align: center; font-size: 20px;">
+    <p style="color: purple; font-family: Arial, sans-serif; text-align: center; font-size: 20px;">
         <?php
         echo "Hello world";
         ?>
@@ -43,7 +43,8 @@
     <details>
         <summary>Mostrar phpinfo()</summary>
         <?php
-        phpinfo();
+        //Cuando se activa esto se pone todo negro
+        //phpinfo();
         ?>
     </details>
 

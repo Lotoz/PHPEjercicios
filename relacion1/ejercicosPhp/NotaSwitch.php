@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calificaciones a partir de switch</title>
-    <link rel="shortcut icon" href="./playamar.png" type="image/x-icon">
+   <link rel="shortcut icon" href="/relacion1/playamar.png" type="image/x-icon">
 </head>
 
 <body>
