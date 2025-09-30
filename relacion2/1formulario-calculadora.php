@@ -11,6 +11,7 @@
 <body>
     <!--El metodo get manda los datos en la misma request, el metodo post es mas privado
     se mandan los datos pero no son visibles. Siempre se usa post, a no ser que sea imposible no usarlo.-->
+<!--mejorar la estetica de esta calculadora, haciendola guapa e intentar programarla-->
     <h2 class="text-primary center py-3 px5">Calculadora basica con 2 numeros y un operador</h2>
     <div class="py5 px5">
         <form action="" method="get" class="border border-primary w-50 row g-3 bg-warning">
