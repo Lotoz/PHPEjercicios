@@ -7,8 +7,9 @@
 </div>
 -->
 <div aling="center">
-  <img src="banner.jpg" alt="php imagen"/>
+  <img src="./assets/banner.jpg" alt="php imagen"/>
 </div>
 
 ## Organizacion
  - Relacion 1 -> Los primeros ejercicios de PHP
+ - Relacion 2 -> Ejercicios con PHP y Bootstrap
