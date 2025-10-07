@@ -36,12 +36,11 @@
             <div>
                 <input type="submit" value="Calcular" class="col-12 btn btn-outline-info"/>
             </div>
-            
     </div>
 
 
     <?php
-
+        
 
     ?>
     </form>
