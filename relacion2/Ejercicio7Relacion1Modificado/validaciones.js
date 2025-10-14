@@ -5,26 +5,40 @@
  * Version1                                          |
  * ************************************************* |
  */
+
+
+//Espacio de los mensajes
+
+
+/**
+ * Importante, debes hacer que desaparezca los mensajes y ponerlos rojos
+ */
 function validarFormularioNotas() {
+
+    //No este vacio
+    //var correo = document.getElementById('correo').value;
+    //Formato de email
     var nota1 = parseFloat(document.getElementById('nota1').value);
     var nota2 = parseFloat(document.getElementById('nota2').value);
     var faltas = parseFloat(document.getElementById('faltas').value);
     //Igual salvo cero
     var nombre = document.getElementById('nombre').value;
-    //No este vacio
-   //var correo = document.getElementById('correo').value;
-    //Formato de email
+
     validacion = true;
-    if(!validaNotas(nota1)){
-       validacion = false;
+    if (!validaNotas(nota1)) {
+        marcarError('nota1');
+        validacion = false;
     }
     if (!validaNotas(nota2)) {
+        marcarError(nota1);
         validacion = false;
     }
     if (!validaFaltas(faltas)) {
+        marcarError('faltas');
         validacion = false;
     }
     if (!cadenaValidador(nombre)) {
+        marcarError('nombre');
         validacion = false;
     }
     return validacion;
@@ -32,8 +46,13 @@ function validarFormularioNotas() {
     //Se debe especificar la vuelta de un false, para que no mande nada
 
 }
+//--bs-body-color 
+function clearError(identificador) {
+    document.getElementById(identificador+'Mal').style.visibility="invisible";
+    document.getElementById(identificador).style.borderColor="#212529";
+}
 function validaNotas(nota) {
-     var errorNota1 = document.getElementById('nota1Mal');
+    var errorNota1 = document.getElementById('nota1Mal');
     if (!isNaN(nota)) {
         if (Number.isInteger(nota)) {
             if (nota >= 1 && nota <= 10) {
@@ -42,44 +61,50 @@ function validaNotas(nota) {
                 errorNota1.textContent = "La nota no es valida, debe estar entre 1 y 10.";
                 return false;
             }
-        } else{
+        } else {   
             errorNota1.textContent = "La nota no es valida, debe ser un numero entero";
             return false;
         }
-    }else{
+    } else {
         errorNota1.textContent = "La nota no es valida, debe ser numerica y entera.";
+
         return false;
     }
 }
 function validaFaltas(faltas) {
-       var faltasMal = document.getElementById('faltasMal');
+    var faltasMal = document.getElementById('faltasMal');
     if (!isNaN(faltas)) {
         if (Number.isInteger(faltas)) {
             if (faltas >= 0) {
-                 return true;
+                return true;
             } else {
                 faltasMal.textContent = "Las faltas no son validas, debe ser cero o mayor a cero.";
                 return false;
             }
-        } else{
+        } else {
             faltasMal.textContent = "Las faltas no son validas, debe ser un numero entero";
             return false;
         }
-    }else{
+    } else {
         faltasMal.textContent = "Las faltas no son validas, no son numericas.";
         return false;
     }
 }
 //Por ahora que es la mas dificil
 //function validaCorreo() {
-  //  return true;
+//  return true;
 //}
 function cadenaValidador(cadena) {
-      var nombreMal = document.getElementById('nombreMal');
+    var nombreMal = document.getElementById('nombreMal');
     if (cadena.trim() == "") {
-       nombreMal.textContent ="La cadena no tiene que estar vacia.";
+        nombreMal.textContent = "La cadena no tiene que estar vacia.";
         return false;
-    }else{
+    } else {
         return true;
     }
+}
+
+function marcarError(identificador) {
+    document.getElementById(identificador+'Mal').style.visibility="visible";
+    document.getElementById(identificador).style.borderColor="red";
 }

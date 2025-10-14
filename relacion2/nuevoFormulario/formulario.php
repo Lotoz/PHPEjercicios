@@ -9,7 +9,7 @@
 <body>
      <div class="d-flex justify-content-center aling-items-center mt-5">
         <!--Cuando el calculo esta en el propio archivo, hay que llamarlo desde action(a si mismo)-->
-        <form class="p-3 shadow rounded" action="calculo.php" method="post" id="formulario" onsubmit="return validarFormularioNotas()">
+        <form class="p-3 shadow rounded" action="calculo.php" method="post" id="formulario">
             <h3>Nota media del alumnado</h3>
             <div class=mb-3>
                 <label class="form-label" for="nombre">Nombre del alumno:<span class="text-danger">*<span></label>
