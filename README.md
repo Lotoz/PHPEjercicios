@@ -13,5 +13,8 @@
 ## Organizacion
  - Relacion 1 -> Los primeros ejercicios de PHP
  - Relacion 2 -> Ejercicios con PHP y Bootstrap
-  - Dentro de cada relacion, se encuentran los ejercicicios ordenados en subcarpetas. 
-  - En la relacion, existe un archivo .pdf el cual dice de que va cada ejercicio
+ - Relacion 3 -> Funciones en PHP
+ - Relacion 4 -> Cookies, sesiones y objetos
+  
+Dentro de cada relacion, se encuentran los ejercicicios ordenados en subcarpetas. 
+En la relacion, existe un archivo .pdf el cual dice de que va cada ejercicio
