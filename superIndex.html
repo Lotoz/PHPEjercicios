@@ -7,7 +7,9 @@
     <title>Super Index PHP</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+        <!--CSS Personalizado-->
+    <link rel="stylesheet" href="./assets/style/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -53,9 +55,9 @@
 
 
     </div>
-    <div class="presentacion m-50">
+    <div class="presentacion m-50 p-5">
         <!--Presentacion mia breve y de la pagina-->
-        <h1 class="mb-3 text-center text-danger">Studying PHP</h1>
+        <h1 class="mb-3 text-center titulos">Studying PHP</h1>
         <p class=" mb-3p-2 text-center">Bienvenidos a este mini-proyecto escolar de PHP. Aqui encontraras varias
             relaciones con
             multiples ejercicios de PHP. La mayoria del estilo de las paginas estara hecho con bootstrap.</p>
@@ -63,7 +65,7 @@
     </div>
     <div class="relaciones m-50 p-5">
         <!--Card de las relaciones-->
-        <h2 class="mb-3p-2 p-5">Relaciones: </h2>
+        <h2 class="mb-3p-2 p-5 titulos">Relaciones: </h2>
         <div>
 
 
@@ -123,13 +125,66 @@
     </div>
     <div class="barraProgreso">
         <!--Barra de progreso-->
-        <progress class="progress"></progress>
+        <progress class=" progresoBarra progress-bar-striped" max="100" value="70"></progress>
     </div>
     <div class="estudios">
-        <!--Contenido de estudio-->
+
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        PHP Roadmap
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Este es el Roadmap de php. Donde se puede ver todo lo que estamos estudiando
+
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Backend Roadmap
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Backend Roadmap
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        PHP Documentacion.
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        PHP documentacion
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
-    <footer class="pieDePagina">
+    <footer class="pieDePagina py-4 mt-5">
         <!--Pie de pagina-->
+        <div class="container d-flex justify-content-between align-items-center">
+            <small class="subTitle">© 2025 Zamira Grippi "Lotoz"</small>
+        <div>
+          <a class="linkEstetica me-3" href="#">Inicio</a>
+          <a class="linkEstetica me-3" href="#">Relaciones</a>
+          <a class="linkEstetica" href="#">Material extra</a>
+        </div>
+        </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

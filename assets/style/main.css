@@ -1,0 +1,50 @@
+:root{
+    --morado-200: #ff00fb;
+    --morado-400: #bd00ba;
+    --morado-600: #8c008a;
+    --dorado-200: #ffaf04;
+    --dorado-400: #e39b00;
+    --dorado-600: #bd8100;
+    --titutolos: #7b00ff;
+    --text-muted: #612d99;
+    --enlaces: #3b0049;
+    --bg-light: #a66be2;
+    --bg-body:  #d0b7ea;
+}
+.navbarEs{
+    background-color: var(--bg-light);
+}
+
+.navbarEs a{
+    color: var(--enlaces);
+    
+} 
+
+.navbarEs a:hover{
+    color: var(--morado-200);
+}
+
+body{
+    background-color: var(--bg-body);
+}
+
+.pieDePagina{
+    background-color: var(--bg-light);
+}
+.linkEstetica{
+    color: var(--enlaces);
+    text-decoration: none;
+}
+.linkEstetica:hover{
+    color: var(--morado-200);
+    text-decoration: none;
+}
+.titulos{
+    color: var(--titutolos);
+    font-weight: 500;
+    font-style: italic;
+}
+.presentacion p{
+    color: var(--text-muted);
+    font-size: 20px;
+}
