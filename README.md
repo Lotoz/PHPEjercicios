@@ -1,6 +1,4 @@
-<code style='color: #8100a8ff'>
-  # PHPEjercicios
-</code>
+# PHPEjercicios
 
 <!--
 <div align="center">
