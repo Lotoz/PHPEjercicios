@@ -1,5 +1,5 @@
 <?php
-
+//Era con la funcion date no get date
 /**
  * Segun el parametro que pase el usuario, devuelve lo pedido
  */
