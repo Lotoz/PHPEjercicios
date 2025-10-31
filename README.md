@@ -1,4 +1,7 @@
-# PHPEjercicios
+<code style='color: #8100a8ff'>
+  # PHPEjercicios
+</code>
+
 <!--
 <div align="center">
   <img width="20" />
@@ -6,17 +9,6 @@
   <img width="20" />
 </div>
 -->
-<style>
-  root:{
-    --morado: #8f0088ff;
-    --rojo: #ff0000ff;
-  }
-  .titulo {
-    color: var(--morado);
-    background: var(--rojo);
-  }
-</style>
-<h1 class="titulo"></h1>
 <div aling="center">
   <img src="./assets/banner.jpg" alt="php imagen"/>
 </div>
