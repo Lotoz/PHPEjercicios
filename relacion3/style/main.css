@@ -1,0 +1,151 @@
+:root {
+  --morado-200: #ff00fb;
+  --morado-400: #bd00ba;
+  --morado-600: #8c008a;
+  --dorado-200: #ffaf04;
+  --dorado-400: #e39b00;
+  --dorado-600: #bd8100;
+  --titulos: #7b00ff;
+  --text-muted: #612d99;
+  --enlaces: #3b0049;
+  --bg-light: #a66be2;
+  --bg-body: #f5ebff;
+}
+
+body {
+  background: var(--bg-body);
+  font-family: "Poppins", sans-serif;
+  color: var(--text-muted);
+}
+
+/* Navbar */
+.navbarEs nav {
+  background: linear-gradient(90deg, var(--bg-light) 0%, var(--dorado-200) 100%);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.navbarEs .nav-link {
+  color: var(--enlaces) !important;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbarEs .nav-link:hover {
+  color: var(--morado-200) !important;
+}
+
+/* Presentación */
+.presentacion {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.titulos {
+  color: var(--titulos);
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.card-title {
+  color: var(--morado-600);
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: var(--morado-400);
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--morado-600);
+}
+
+/* Barra de progreso */
+.barraProgreso {
+  margin: 3rem auto;
+  width: 80%;
+}
+
+.progress {
+  height: 25px;
+  border-radius: 15px;
+  background-color: #e6d4f7;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, var(--morado-400), var(--dorado-400));
+}
+
+/* Acordeón */
+.accordion-button {
+  background-color: var(--bg-light);
+  color: var(--enlaces);
+  font-weight: 500;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--morado-200);
+  color: white;
+}
+
+/* Footer */
+.pieDePagina {
+  background: linear-gradient(90deg, var(--bg-light) 0%, var(--morado-600) 100%);
+  color: white;
+}
+
+.linkEstetica {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.linkEstetica:hover {
+  color: var(--dorado-200);
+}
+
+.barraProgreso {
+  width: 80%;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.progress {
+  height: 30px;
+  background-color: #e8d9f7;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+  width: 0; 
+  background: linear-gradient(90deg, var(--morado-400), var(--dorado-400));
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  transition: width 0.6s ease;
+  animation: fillProgress 1.5s ease-out forwards;
+}
+
+
+@keyframes fillProgress {
+  from { width: 0; }
+  to { width: 15%; } 
+}

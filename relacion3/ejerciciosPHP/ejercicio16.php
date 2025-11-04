@@ -1,23 +1,3 @@
-<?php
-// ejercicio16.php - usar funciones array_* con callbacks
-$numbers = range(1, 100);
-$all_positive = array_all($numbers, fn($v, $k) => $v > 0);
-$any_mult5 = array_any($numbers, fn($v, $k) => $v % 5 === 0);
-function is_prime($n)
-{
-  if ($n < 2) return false;
-  for ($i = 2; $i * i <= $n; $i++) if ($n % $i === 0) return false;
-  return true;
-}
-$primes = array_filter($numbers, fn($v, $k) => is_prime($v));
-$first_double_digit_same = array_find($numbers, fn($v, $k) => $v >= 10 && $v < 100 && intval($v / 10) === ($v % 10));
-$squares = array_map($numbers, fn($v, $k) => $v * $v); // PHP 8.4 array_map signature supports named params this way
-// array_walk to double values (we'll copy and modify)
-$walked = $numbers;
-array_walk($walked, function (&$v, $k) {
-  $v = $v * 2;
-});
-?>
 <!doctype html>
 <html>
 
@@ -37,7 +17,26 @@ array_walk($walked, function (&$v, $k) {
     <div class="alert alert-info"><strong>Cuadrados (primeros 10)</strong> <?php echo implode(', ', array_slice($squares, 0, 10)); ?></div>
     <div class="alert alert-dark"><strong>Doblados mediante array_walk (primeros 10)</strong> <?php echo implode(', ', array_slice($walked, 0, 10)); ?></div>
   </div>
-  <script src="ejercicio16.js"></script>
+  <?php
+  // Mirar funcion por funcion
+  $numbers = range(1, 100);
+  $all_positive = array_all($numbers, fn($v) => $v > 0);
+  $any_mult5 = array_any($numbers, fn($v) => $v % 5 === 0);
+  function is_prime($n)
+  {
+    if ($n < 2) return false;
+    for ($i = 2; $i * i <= $n; $i++) if ($n % $i === 0) return false;
+    return true;
+  }
+  $primes = array_filter($numbers, fn($v) => is_prime($v));  //Todos los array que cumplan la condicion devuelve la funcion se llama entre comillas. Se entiende que el parametro es el valor del array
+  $first_double_digit_same = array_find($numbers, fn($v) => $v >= 10 && $v < 100 && intval($v / 10) === ($v % 10));
+  $squares = array_map(fn($v) => $v * $v, $numbers); // PHP 8.4 array_map signature supports named params this way
+  // array_walk to double values (we'll copy and modify)
+  $walked = $numbers;
+  array_walk($walked, function (&$v) {
+    $v = $v * 2;
+  });
+  ?>
 </body>
 
 </html>

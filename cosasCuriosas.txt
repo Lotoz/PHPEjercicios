@@ -1,0 +1,25 @@
+Sandbox de PHP
+https://onlinephp.io/
+Caracteristicas avanzadas
+te dice cual funciona en un navegador y cual
+https://caniuse.com/
+
+Hacer apuntes de cada ejercicio
+
+Crear una libreria con funciones creadas por mi.
+Esta sera general para usarse
+
+Para Ejercicio dificil pillar el 18. 
+Se debe agregar alergenos y sacarlo
+
+Expresion regular para las password de minusculas, mayusculas
+
+Libreria propia de funciones de array 
+// 1. Combina los arrays
+$arrayCombinado = array_merge($array1, $array2);
+
+// 2. Elimina los duplicados y conserva las claves originales
+$arrayUnico = array_unique($arrayCombinado);
+
+// Muestra el resultado
+print_r($arrayUnico);

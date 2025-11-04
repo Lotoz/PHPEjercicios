@@ -48,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sorted = $toSort;
     }
 }
+
 ?>
 <!doctype html>
 <html lang="es">
