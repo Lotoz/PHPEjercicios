@@ -1,4 +1,4 @@
-<?php
+ <?php
 // ejercicio20.php - seguridad y sanitización moderna
 $mensaje = '';
 $sorted = null;
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8">
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="text" name="names" class="form-control w-50 d-inline-block" required>
         <button type="submit" class="btn btn-primary ms-2">Enviar</button>
     </form>
-
+   
     <?php if ($mensaje): ?>
         <div class="alert alert-danger"><?php echo $mensaje; ?></div>
     <?php endif; ?>

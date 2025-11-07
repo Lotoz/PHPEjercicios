@@ -94,7 +94,7 @@
             <label for="cantidadDeMenu" class="col-form-label">Número de menús (máx <?php echo array_product(array_map('count', $menu)); ?>):</label>
         </div>
         <div class="col-auto">
-            <input type="number" min="1" max="<?php echo array_product(array_map('count', $menu)); ?>" id="cantidadDeMenu" name="cantidadDeMenu"
+            <input type="text" min="1" max="<?php echo array_product(array_map('count', $menu)); ?>" id="cantidadDeMenu" name="cantidadDeMenu"
                    class="form-control" value="<?php echo isset($cantidadDeMenu) ? htmlspecialchars($cantidadDeMenu) : '1'; ?>">
         </div>
         <div class="col-auto">
@@ -139,7 +139,7 @@
             <?php endforeach; ?>
         </div>
     <?php elseif ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
-        <div class="alert alert-warning">No se pudieron generar menús.</div>
+        <div class="alert alert-danger">No se pudieron generar menús.</div>
     <?php endif; ?>
 </div>
 
