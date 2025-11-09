@@ -1,0 +1,9 @@
+#No guardar la carpeta de vscode
+.vscode/
+#Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+#Ignorar archivos de log
+*.log
+#Ignorar importantes de metadatos
+*.meta
