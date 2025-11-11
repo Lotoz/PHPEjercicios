@@ -1,0 +1,24 @@
+Las variables de sesion y las cookies la crea php. Estan vivas durante toda la sesion.
+|
++->Lo normal es que sean desde el login, hasta que tu haces logout.
+
+
+Se ponen 
+<?php 
+    session.start()
+?>
+Para acabar hay que poner session.destroy()
+La sesion abierta te da un identicador, un token hasta que termines la sesion y almacena los datos en el lado servidor
+
+Las cookies son -> Se crean y se destruyen, con la misma funcion, se les asigna un nombre, un valor y un tiempo de vida
+Haciendo que el tiempo sea negativo
+Las cookies residen en el cliente
+https://www.geeksforgeeks.org/php/php-cookies/
+Cada una varia en uso
+setcookie(name, value, expire, path, domain, security);
+Solo name y value, cookie forever
+Expire tiempo de vida de cookie
+Con path, le dices donde se active la cookie
+Carrito de la compra del lado cliente
+Cookies de tracking, se han quedado con tu huella digital
+Para que se active la cookie se recarga la pagina

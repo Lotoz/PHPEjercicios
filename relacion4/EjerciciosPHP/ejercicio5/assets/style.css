@@ -1,0 +1,14 @@
+:root {
+    --fondo1 : #ffcec0;
+    --fondo2: #feb7a3;
+    --fondo3: #ff8a69;
+}
+
+.contenedor{
+    background-color: var(--fondo1);
+    width: 600px;
+    height: 400px;
+    padding-top: 15px;
+    border-radius: 20%;
+}
+
