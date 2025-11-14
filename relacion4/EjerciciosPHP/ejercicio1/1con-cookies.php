@@ -33,11 +33,14 @@ session_start(); //Iniciamos la sesion acaba arriba
             unset($_SESSION['errorLogin']);
             if (compruebaAcceso($idusuario, $contrasena)) {
                 setcookie('usuario', $idusuario); //Cookie permanente
+
                 if (isset($_COOKIE['usuario'])) {
                     //Demostracion de usuario
                     echo "Te llamas " . $_COOKIE['usuario'] . '<br>'; //se almacena en el cliente
                 }
-
+                //Muestra el numero de session
+                //Este apache no limpia bien y a veces aunque cierres la sesion se queda el mismo
+                echo session_id();
                 //Se usan para un chingo de cosas, es una cabecera htlp ? 
                 //header(refresh, true, 0);
                 //Le damos al valor de sesion al usuario de la sesion que hemos iniciado

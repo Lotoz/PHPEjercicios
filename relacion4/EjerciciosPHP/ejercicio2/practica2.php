@@ -1,6 +1,11 @@
 <?php
 session_start();
-
+//Si se usa unset esto se repite 2 veces
+//Cargamos siempre desde el inicio las cosas
+if (!isset($_SESSION['A'])) {
+    $_SESSION['A'] = 0;
+    $_SESSION['B'] = 0;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,11 +22,6 @@ session_start();
 
 <body>
     <?php
-    //Si se usa unset esto se repite 2 veces
-    if (!isset($_SESSION['A'])) {
-        $_SESSION['A'] = 0;
-        $_SESSION['B'] = 0;
-    }
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         switch ($_REQUEST['selecciona']) {
             case 'AMAS':
@@ -46,8 +46,38 @@ session_start();
                 $_SESSION['A'] = 0;
                 $_SESSION['B'] = 0;
                 session_destroy();
-                break;
+                //conjunto de spiners
+                echo '
 
+<div class="spinner-grow text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-secondary" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-success" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-danger" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-warning" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-info" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-grow text-dark" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-primary" role="status">
+  <span class="visually-hidden">Loading...</span>Loading...
+</div>
+
+';
+                //Reinicia la pagina y tarda 30 segundos
+                header('refresh: 30;'); //Refresca la pagina
+                break;
             default:
                 echo 'Ha fallado la selecicon';
                 break;

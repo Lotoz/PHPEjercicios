@@ -36,9 +36,9 @@ session_start(); //Iniciamos la sesion acaba arriba
         echo "<div class='alert alert-danger' role='alert'>
              No se quien sos pa
             </div>";
+        //Quita el alert
+        unset($_SESSION['errorLogin']);
     }
-    //Quita el alert
-    unset($_SESSION['errorLogin']);
     ?>
 
 </body>

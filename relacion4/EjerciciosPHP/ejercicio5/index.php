@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+include 'objeto.php';
+?>
 
 <head>
     <meta charset="UTF-8">
@@ -21,6 +24,7 @@
                 <div>
                     <label for="nombre">Nombre:</label><br>
                     <input type="text" name="nombre" id="nombre">
+                    <button type="submit" name='cambiar' id='cambiar'>cambiar</button>
                 </div>
                 <div>
                     <label for="tipo">Tipo de restaurante:</label>
@@ -30,13 +34,31 @@
                     <label for="rating">Quieres agregar ratings?</label>
                     <input type="text" name="rating" id="rating">
                 </div>
-                <button type="submit" id='enviar'></button>
+                <button type="submit" name='enviar' id='enviar'>enviar</button>
+                <button type="submit" name='mostrar' id='mostrar'>mostrar</button>
             </form>
         </div>
         <?php
-        //Para verificar el boton
+        //Para verificar el boton necesita name e id
+        $newRestaurante;
         if (isset($_REQUEST['enviar'])) {
+            //Creamos un restaurante
+            $nombre = $_REQUEST['nombre'];
+            $tipo = $_REQUEST['tipo'];
+            $rating = $_REQUEST['rating'];
+            $newRestaurante = new restaurante($nombre, $tipo);
+            //Agregamos el rating
+            //Asi se declaran las funciones
+
+            /**
+             * Si es funcion static : 
+             * Si es con parametros ->
+             */
         }
+        if (isset($_REQUEST['mostrar'])) {
+            $newRestaurante->__toString();
+        }
+
         ?>
 
     </div>

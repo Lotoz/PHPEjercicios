@@ -32,7 +32,7 @@ class restaurante
     }
     //Agregar ratings
     public function setRatings($nuevaRating)
-    {
+    { //Hay un error aqui
         array_push(self::$ratings, $nuevaRating);
     }
     //Agrega otros ratings

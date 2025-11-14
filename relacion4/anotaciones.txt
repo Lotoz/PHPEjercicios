@@ -9,6 +9,10 @@ Se ponen
 ?>
 Para acabar hay que poner session.destroy()
 La sesion abierta te da un identicador, un token hasta que termines la sesion y almacena los datos en el lado servidor
+Se guarda en una cookie el token, identificador de una sesion abierta. Por ello se efectua el robo de cookies.
+Reiniciar la session para evitar ataques. Asi se reinicia el ID.
+$_SESSION = [] -> Borra todo
+
 
 Las cookies son -> Se crean y se destruyen, con la misma funcion, se les asigna un nombre, un valor y un tiempo de vida
 Haciendo que el tiempo sea negativo
@@ -22,3 +26,29 @@ Con path, le dices donde se active la cookie
 Carrito de la compra del lado cliente
 Cookies de tracking, se han quedado con tu huella digital
 Para que se active la cookie se recarga la pagina
+
+Las cookies las guarda el cliente y el navegador
+Las de session se guardan en el servidor
+
+header() -> https://www.geeksforgeeks.org/php/php-header-function/
+header(Ejemplos)
+https://gist.github.com/ScottPhillips/3026050
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AlvaroMG64
