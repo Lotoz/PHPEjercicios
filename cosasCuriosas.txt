@@ -23,3 +23,8 @@ $arrayUnico = array_unique($arrayCombinado);
 
 // Muestra el resultado
 print_r($arrayUnico);
+
+Extensiones para php
+PHP Awesome Snippets
+Code Spell Checker
+Catpuccin alt, aumenta la estetica

@@ -49,6 +49,7 @@ include 'objeto.php';
             $newRestaurante = new restaurante($nombre, $tipo);
             //Agregamos el rating
             //Asi se declaran las funciones
+            $newRestaurante->setRatings($rating);
 
             /**
              * Si es funcion static : 

@@ -1,3 +1,4 @@
+
 <?php
 class restaurante
 {
@@ -16,12 +17,18 @@ class restaurante
         $this->ratings = $ratings;
     }finen los tipos como java
     */
+    //Atributo static
+    private static $restaurantes = 0; // un contador de la clase, para saber cuantos se han creado
 
-    function __construct(
-        public String $nombre,
-        public String $tipoCocina,
-        public array $ratings = []
-    ) {}
+    public function __construct(
+        private String $nombre,
+        private String $tipoCocina,
+        private array $ratings = []
+    ) {
+        //Para llamar a la clase
+        //El self chiquito es para trabjar con estos attributos staticos
+        Self::$restaurantes++;
+    }
 
     //El destructor
     public function __destruct()
