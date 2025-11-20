@@ -147,5 +147,5 @@ body {
 
 @keyframes fillProgress {
   from { width: 0; }
-  to { width: 35%; } 
+  to { width: 45%; } 
 }
