@@ -1,12 +1,6 @@
 <?php
 class CuentaCredito extends CuentaBancaria
 {
-    //Atributos
-    private string $numeroCuenta;
-    private string $nombreTitular;
-    private float $saldo;
-    private int $numOperaciones;
-
     //Constructor
     public function __construct($numeroCuenta, $nombreTitular, $saldo, $numOperaciones)
     {

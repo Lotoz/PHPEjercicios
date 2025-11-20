@@ -2,10 +2,10 @@
 class CuentaBancaria
 {
     //Atributos
-    private string $numeroCuenta;
-    private string $nombreTitular;
-    private float $saldo;
-    private int $numOperaciones;
+    protected string $numeroCuenta;
+    protected string $nombreTitular;
+    protected float $saldo;
+    protected int $numOperaciones;
 
     //Constructor
     public function __construct($numeroCuenta, $nombreTitular, $saldo, $numOperaciones)
