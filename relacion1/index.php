@@ -66,24 +66,25 @@
     <!--Indice de actividades-->
     <div class="text-center">
         <ol class="list-group">
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/holamundo.php" target="_blank"> Programa "hola mundo" en php</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/tiposFormatos.php" target="_blank">Trabajando con Tipos</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/variablesGlobal.php" target="_blank">Trabajando con Variables Superglobales</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/arrays.php" target="_blank">Arrays</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/arrayComplejo.php" target="_blank">Manejo de array 2</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/frutas.php" target="_blank">Frutas</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/calculaNotas.php" target="_blank">Calculador de notas</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/triangulo.php" target="_blank">Triangulos</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/resuelveEcuacion.php" target="_blank">Ecuacion de segundo grado</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/NotaSwitch.php" target="_blank">Notas con switch</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/factorial.php" target="_blank">factorial</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/sumaNumerosNaturales.php" target="_blank">Suma numeros naturales.</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/numerosPrimos.php" target="_blank">Numeros Primos</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/Divisores.php" target="_blank">Divisores</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/euclides.php" target="_blank">Euclides division</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/MaximoComunDivisor.php" target="_blank">Maximo comun</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/binariosEjercicio1.php" target="_blank">Binarios</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion1/ejercicosPhp/binariosEjercicio2.php" target="_blank">Binarios 2</a></li>
+            <li><a href="./ejercicosPhp/holamundo.php" target="_blank"> Programa "hola mundo" en php</a></li>
+            <li><a href="./ejercicosPhp/tiposFormatos.php" target="_blank">Trabajando con Tipos</a></li>
+            <li><a href="./ejercicosPhp/variablesGlobal.php" target="_blank">Trabajando con Variables Superglobales</a></li>
+            <li><a href="./ejercicosPhp/arrays.php" target="_blank">Arrays</a></li>
+            <li><a href="./ejercicosPhp/arrayComplejo.php" target="_blank">Manejo de array 2</a></li>
+            <li><a href="./ejercicosPhp/frutas.php" target="_blank">Frutas</a></li>
+            <li><a href="./ejercicosPhp/calculaNotas.php" target="_blank">Calculador de notas</a></li>
+            <li><a href="./ejercicosPhp/calculoDeNotasComplejo.php" target="_blank">Calculo de notas II</a></li>
+            <li><a href="./ejercicosPhp/triangulo.php" target="_blank">Triangulos</a></li>
+            <li><a href="./ejercicosPhp/resuelveEcuacion.php" target="_blank">Ecuacion de segundo grado</a></li>
+            <li><a href="./ejercicosPhp/NotaSwitch.php" target="_blank">Notas con switch</a></li>
+            <li><a href="./ejercicosPhp/factorial.php" target="_blank">factorial</a></li>
+            <li><a href="./ejercicosPhp/sumaNumerosNaturales.php" target="_blank">Suma numeros naturales.</a></li>
+            <li><a href="./ejercicosPhp/numerosPrimos.php" target="_blank">Numeros Primos</a></li>
+            <li><a href="./ejercicosPhp/Divisores.php" target="_blank">Divisores</a></li>
+            <li><a href="./ejercicosPhp/euclides.php" target="_blank">Euclides division</a></li>
+            <li><a href="./ejercicosPhp/MaximoComunDivisor.php" target="_blank">Maximo comun</a></li>
+            <li><a href="./ejercicosPhp/binariosEjercicio1.php" target="_blank">Binarios</a></li>
+            <li><a href="./ejercicosPhp/binariosEjercicio2.php" target="_blank">Binarios 2</a></li>
         </ol>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

@@ -33,3 +33,4 @@ Las de session se guardan en el servidor
 header() -> https://www.geeksforgeeks.org/php/php-header-function/
 header(Ejemplos)
 https://gist.github.com/ScottPhillips/3026050
+https://www.markdownguide.org/basic-syntax/
