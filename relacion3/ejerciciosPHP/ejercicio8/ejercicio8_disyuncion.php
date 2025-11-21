@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body class="p-3">
-  <div class="container">
+  <div class="container bg-secondary">
     <h1>Ejercicio 8 - mostrar mayúsculas <em>o</em> minúsculas (disyunción)</h1>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" id="form8d">
       <div class="mb-3">
