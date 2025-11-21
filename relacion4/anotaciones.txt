@@ -34,3 +34,6 @@ header() -> https://www.geeksforgeeks.org/php/php-header-function/
 header(Ejemplos)
 https://gist.github.com/ScottPhillips/3026050
 https://www.markdownguide.org/basic-syntax/
+
+El trait es como un paquete de multiples objetos, pero no es una interfaz. Trae la cosa, estudiar herencia multiple en php
+Los traits se usan con lavarel y funcionan bien  bCube traits php
