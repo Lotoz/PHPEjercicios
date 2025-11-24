@@ -1,0 +1,179 @@
+:root {
+    --fondo: #150000;
+    --scp-bg: #071014;
+    /* fondo general, casi negro */
+    --scp-panel: #0f1619;
+    /* paneles */
+    --scp-surface: #0b1214;
+    /* superficies secundarias */
+    --scp-accent: #b30000;
+    /* rojo SCP */
+    --scp-accent-2: #ff3b3b;
+    /* rojo brillante */
+    --scp-muted: #9aa3a8;
+    /* texto secundario */
+    --scp-text: #e6efef;
+    /* texto principal claro */
+    --scp-glow: rgba(179, 0, 0, 0.16);
+    /* sizes */
+    --card-radius: 8px;
+    --card-padding: 22px;
+    --form-width: 420px;
+    --mono: "Anonymous Pro","Roboto Mono", "Courier New", monospace;
+    --ui: "Inter", "Segoe UI", Roboto, sans-serif;
+}
+
+.fondo{
+    background-color: var(--fondo);
+}
+/* Logo frame y layout */
+.logoSCP {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.scp-frame {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.06));
+    border: 3px solid var(--scp-accent);
+    box-shadow: 0 10px 30px rgba(2, 6, 8, 0.6), 0 0 0 6px rgba(179, 0, 0, 0.04) inset;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Contenedor general*/
+.contenedor {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+/* Tarjeta / formulario */
+.formularioEstilo {
+    width: 100%;
+    max-width: 900px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent 40%), var(--scp-panel);
+    border-radius: var(--card-radius);
+    padding: 18px;
+    box-shadow: 0 10px 30px rgba(2, 6, 8, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.02) inset;
+    position: relative;
+    border-left: 6px solid var(--scp-accent);
+    box-sizing: border-box;
+    color: var(--scp-text);
+    font-size: 14px;
+}
+
+/* Encabezado */
+.formularioEstilo h2 {
+    margin: 0;
+    font-family: var(--mono);
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: var(--scp-text);
+}
+
+/* Agrupación de label + input */
+.labelsInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+/* Labels: pequeños, monoespaciados, severos */
+.labelsInputs>label {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--scp-muted);
+    margin: 0;
+}
+
+/* Inputs: estilo bootstrap-friendly pero con look SCP */
+.form-control {
+    appearance: none;
+    -webkit-appearance: none;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.00));
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    color: var(--scp-text);
+    padding: 10px 12px;
+    border-radius: 6px;
+    outline: none;
+    transition: box-shadow 160ms ease, border-color 160ms ease, transform 120ms ease;
+    font-size: 14px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.01) inset;
+}
+
+/* Placeholder */
+.form-control::placeholder {
+    color: rgba(49, 49, 49, 0.673);
+}
+
+/* Focus visible */
+.form-control:focus {
+    border-color: var(--scp-accent);
+    box-shadow: 0 6px 18px var(--scp-glow), 0 0 0 3px rgba(179, 0, 0, 0.06);
+    transform: translateY(-1px);
+    background-color: rgb(22, 22, 22);
+    color: var(--scp-text);
+}
+
+/* Alerts personalizados (estéticos y con colores SCP) */
+.alert-scp {
+    background: linear-gradient(180deg, rgba(179, 0, 0, 0.06), rgba(0, 0, 0, 0.28));
+    color: var(--scp-text);
+    border: 1px solid rgba(179, 0, 0, 0.18);
+    border-left: 6px solid var(--scp-accent);
+    padding: .5rem .75rem;
+    border-radius: 6px;
+    font-family: var(--mono);
+    font-size: 13px;
+    margin: 0;
+}
+
+/* pequeña variante para success/info si se necesitan */
+.alert-scp--info {
+    background: linear-gradient(180deg, rgba(154, 163, 168, 0.06), rgba(0, 0, 0, 0.18));
+    border-left-color: var(--scp-muted);
+    color: var(--scp-text);
+}
+
+.boton{
+    font-family: var(--mono);
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 6px ;
+}
+.boton:hover{
+    background-color: var(--scp-accent);
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid var(--scp-accent-2);
+}
+
+/* Responsive tweaks */
+@media (max-width:768px) {
+    .scp-frame {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 12px;
+    }
+
+    .formularioEstilo {
+        padding: 14px;
+    }
+}
