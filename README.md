@@ -1,6 +1,6 @@
 # PHP Ejercicios de clase
 
-**En este repositorio se encuentran todos los ejercicios realizados en clases**
+**En este repositorio se encuentran todos los ejercicios realizados en clases.**
 
 Puedes navegar mas con mayor comodidad entre los ejercicios con el siguiente link.
 
@@ -10,13 +10,30 @@ Puedes navegar mas con mayor comodidad entre los ejercicios con el siguiente lin
 
 ---
 
-## Organizacion
+## Organizacion de las carpetas
 
-- Relacion 1 -> Los primeros ejercicios de PHP
-- Relacion 2 -> Ejercicios con PHP y Bootstrap
-- Relacion 3 -> Funciones en PHP
-- Relacion 4 -> Cookies, sesiones y objetos
-  
+📁 PHPEjercicios
+├── 📂 phpProyecto
+│   └── CRUD de PHP
+│
+├── 📂 Relacion 1
+│   └── Primeros ejercicios de PHP
+│
+├── 📂 Relacion 2
+│   └── Ejercicios con PHP y Bootstrap
+│
+├── 📂 Relacion 3
+│   └── Funciones en PHP
+│
+└── 📂 Relacion 4
+│   └── Cookies, sesiones y objetos
+│
+└── cosasCuriosas.txt (anotaciones personales de clases)
+│
+└── superIndex.html
+│
+└── README.md (Usted esta aqui 🐧)
+
 Dentro de cada relacion, se encuentran los ejercicicios ordenados en subcarpetas.
 En la relacion, existe un archivo .pdf el cual dice de que va cada ejercicio.
 
