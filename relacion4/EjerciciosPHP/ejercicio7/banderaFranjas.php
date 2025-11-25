@@ -1,7 +1,7 @@
 <?php
 class banderaFranjas
 {
-    //Atributos
+    // 0 horizontal, 1 vertical
     private int $orientacion;
     private array $colores;
     private string $nombre;
@@ -14,6 +14,7 @@ class banderaFranjas
     }
     public function __destruct() {}
 
+    // Getters
     public function getOrientacion()
     {
         return $this->orientacion;
@@ -26,6 +27,8 @@ class banderaFranjas
     {
         return $this->nombre;
     }
+
+    // Setters
     public function setOrientacion($newOrientacion)
     {
         $this->orientacion = $newOrientacion;
@@ -39,30 +42,52 @@ class banderaFranjas
         $this->nombre = $newNombre;
     }
 
-    //Metodo que muestra por pantalla la bandera
-    public function mostrarBandera(banderaFranjas $bandera)
+    // Mostrar bandera en pantalla
+    public function mostrarBandera()
     {
-        foreach ($bandera->getColores() as $key => $value) {
-            echo $value;
+        $orientacion = $this->orientacion;
+        $colores = $this->colores;
+
+        $style = "width:200px; height:130px; display:flex; 
+                  " . ($orientacion == 0 ? "flex-direction:column;" : "flex-direction:row;");
+
+        echo "<div style='$style; border:1px solid black; margin:10px 0;'>";
+        foreach ($colores as $color) {
+            echo "<div style='flex:1; background:$color;'></div>";
         }
+        echo "</div>";
     }
-    public function comparaBanderas(banderaFranjas $bandera, banderaFranjas $bandera2)
+
+    // Comparar bandera exactamente (orientación y colores)
+    public function comparaBanderas(banderaFranjas $bandera2): bool
     {
-        //Comparamos ambos colores, son un array, buscar la funcion
+        return $this->orientacion === $bandera2->getOrientacion()
+            && $this->colores === $bandera2->getColores();
     }
-    public function comparaFranjaBandera(banderaFranjas $bandera, banderaFranjas $bandera2)
+
+    // Comparar ignorando orientación
+    public function comparaFranjaBandera(banderaFranjas $bandera2): bool
     {
-        //Pasar los colores de una bandera a la misma horientacion y comparar
+        return $this->colores === $bandera2->getColores();
     }
-    public function invierteColores(banderaFranjas $bandera)
+
+    // Invierte colores
+    public function invierteColores(): void
     {
-        //Invierte los colores de la franja de la bandera
+        $this->colores = array_reverse($this->colores);
     }
-    public function invierteOrientacion(banderaFranjas $bandera)
+
+    // Invierte orientación
+    public function invierteOrientacion(): void
     {
-        //Invierte la orientaciond de las franjas
+        $this->orientacion = $this->orientacion === 0 ? 1 : 0;
     }
 }
+
+//! Bamderas de prueba
+$bandera1 = new banderaFranjas(0, ["red", "yellow", "red"], "España");
+$bandera2 = new banderaFranjas(1, ["red", "yellow", "red"], "España vertical");
+$bandera3 = new banderaFranjas(0, ["blue", "white", "red"], "Francia invertida");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,37 +99,58 @@ class banderaFranjas
 </head>
 
 <body>
-    <h1>Probando los metodos con banderas ya prehechas.</h1>
-    <div>
-        <h2>Prueba de mostrar la bandera correctamente</h2>
-        <div>
+    <h1>Probando métodos de la clase banderaFranjas</h1>
 
-        </div>
-    </div>
+    <!-- Mostrar bandera -->
     <div>
-        <h2>Prueba de comparar banderas</h2>
-        <div>
-
-        </div>
+        <h2>1. Prueba de mostrar bandera</h2>
+        <?php $bandera1->mostrarBandera(); ?>
     </div>
+
+    <!-- Comparar banderas exactamente -->
     <div>
-        <h2>rueba de comparar ignorando la orientacion</h2>
-        <div>
-
-        </div>
+        <h2>2. Comparación exacta (orientación + colores)</h2>
+        <?php
+        echo "Comparando España horizontal con España vertical: ";
+        echo $bandera1->comparaBanderas($bandera2) ? "Iguales" : "Distintas";
+        ?>
     </div>
+
+    <!-- Comparación ignorando orientación -->
     <div>
-        <h2>Prueba de invertir colores</h2>
-        <div>
-
-        </div>
+        <h2>3. Comparar ignorando orientación (solo colores)</h2>
+        <?php
+        echo "Comparando España horizontal con España vertical: ";
+        echo $bandera1->comparaFranjaBandera($bandera2) ? "Iguales" : "Distintas";
+        ?>
     </div>
+
+    <!-- Invertir colores -->
     <div>
-        <h2>Prueba de inviertir orientacion de franjas</h2>
-        <div>
+        <h2>4. Invertir colores</h2>
+        <?php
+        echo "Colores originales de bandera Francia invertida:";
+        $bandera3->mostrarBandera();
 
-        </div>
+        $bandera3->invierteColores();
+        echo "Colores invertidos:";
+        $bandera3->mostrarBandera();
+        ?>
     </div>
+
+    <!-- Invertir orientación -->
+    <div>
+        <h2>5. Invertir orientación de la bandera</h2>
+        <?php
+        echo "Antes:";
+        $bandera2->mostrarBandera();
+
+        $bandera2->invierteOrientacion();
+        echo "Después:";
+        $bandera2->mostrarBandera();
+        ?>
+    </div>
+
 </body>
 
 </html>

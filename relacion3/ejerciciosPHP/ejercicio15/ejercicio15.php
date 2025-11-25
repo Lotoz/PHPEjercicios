@@ -19,7 +19,7 @@
     $r = floatval($_POST['r'] ?? 0);
     if ($r <= 0) $explanation = '<div class="alert alert-danger">Radio debe ser positivo.</div>';
     else {
-      $circ = fn($n) => 2 * M_PI * $n;
+      $circ = fn($n) => 2 * M_PI * $n; //Funciones anonimas
       $area = fn($n) => M_PI * $n * $n;
       $vol = fn($r) => (4 / 3) * M_PI * $r ** 3;
       $explanation = '<ul>';
@@ -29,11 +29,8 @@
       $explanation .= '</ul>';
     }
   }
-  $note = "<p>switch es una estructura clásica que permite 'caer' entre casos si no se usa break; match (PHP 8.0) devuelve un valor, no permite caídas y es más seguro para comparaciones estrictas.</p>";
   ?>
   <div><?php echo $explanation; ?></div>
-  <hr>
-  <div><?php echo $note; ?></div>
 </body>
 
 </html>

@@ -3,8 +3,9 @@
 $result_html = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $r = floatval($_POST['r'] ?? 0);
-  if ($r <= 0) $result_html = '<div class="alert alert-danger">Introduce un radio positivo.</div>';
-  else {
+  if ($r <= 0) {
+    $result_html = '<div class="alert alert-danger">Introduce un radio positivo.</div>';
+  } else {
     $circunferencia = function ($n) {
       return 2 * M_PI * $n;
     };

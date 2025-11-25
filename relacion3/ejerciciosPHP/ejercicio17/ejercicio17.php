@@ -1,46 +1,126 @@
-
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 17</title>
 </head>
 
 <body>
-    <h1>Ejercicio 17 - funciones varias de array</h1>
-    <p>Pares: <?php echo implode(', ', $impares); ?></p>
-    <p>Múltiplos de 3: <?php echo implode(', ', $multTres); ?></p>
-    <p>Cantidad de impares: <?php echo $count_pares; ?></p>
-    <p>Alguno múltiplo de 5? <?php echo $any_mult5 ? 'Sí' : 'No'; ?></p>
-    <p>Primos: <?php echo implode(', ', $primos); ?></p>
-    <p>Primera doble cifra idéntica: <?php echo $first_double_same ?? 'No hay'; ?></p>
-    <p>Cuadrados (primeros 10): <?php echo implode(', ', array_slice($squares, 0, 10)); ?></p>
-    <p>Doblados (primeros 10): <?php echo implode(', ', array_slice($walk, 0, 10)); ?></p>
-    <p>Intersección: <?php echo implode(', ', $intersect) ?: 'Ninguno'; ?></p>
+    <h1>Ejercicio 17</h1>
     <?php
-// ejercicio17.php - usar muchas funciones de array Verificar ejercicio
-$impares = range(1, 20, 2); // 1,3,5,...,19
-$multTres = range(3, 39, 3); // 3,6,...,39
-$count_pares = count($impares); 
-$any_mult5 = array_any($impares, fn($v) => $v % 5 === 0);
-function esPrimo($n)
-{
-    if ($n < 2) return false;
-    for ($i = 2; $i * $i <= $n; $i++) 
-        if ($n % $i === 0) return false;
+    //!Mostrar array en <ul>
+    function mostrarArrayLista($array)
+    {
+        echo "<ul>";
+        foreach ($array as $key => $value) {
+            echo "<li>$key => $value</li>";
+        }
+        echo "</ul>";
+    }
+
+    //!Reindexar array (evitar claves saltadas)
+    function acomodaKeys($array)
+    {
+        $acomodado = [];
+        foreach ($array as $value) {
+            $acomodado[] = $value;
+        }
+        return $acomodado;
+    }
+
+    //!array_any: ¿Algún elemento cumple?
+    function array_any(array $array, callable $callback): bool
+    {
+        foreach ($array as $k => $v) {
+            if ($callback($v, $k)) return true;
+        }
+        return false;
+    }
+
+    //! array_find: primer valor que cumple
+    function array_find(array $array, callable $callback)
+    {
+        foreach ($array as $k => $v) {
+            if ($callback($v, $k)) return $v;
+        }
+        return null;
+    }
+
+    //!Primo
+    function esPrimo($n)
+    {
+        if ($n < 2) return false;
+        for ($i = 2; $i * $i <= $n; $i++) {
+            if ($n % $i === 0) return false;
+        }
         return true;
-}
-$primos = array_filter($impares, fn($v) => esPrimo($v));
-$first_double_same = array_find($impares, fn($v) => $v >= 10 && $v < 100 && intval($v / 10) === ($v % 10));
-$squares = array_map(fn($v) => $v * $v,$impares);
-$walk = $impares;
-array_walk($walk, function (&$v) {
-    $v *= 2;
-});
-//No es con intersect
-$intersect = array_intersect($impares, $multTres);
-?>
+    }
+
+    //! Generacion de arrays
+    $impares = range(1, 20, 2);         // 1,3,5,...19
+    $array2  = range(1, 40, 1);         // 1..40
+
+
+    // Múltiplos de 3
+    $filtrado = array_filter($array2, fn($n) => $n % 3 === 0);
+    $multiplosDeTres = acomodaKeys($filtrado);
+
+    // Unión de impares + múltiplos de 3
+    $union = array_merge($impares, $multiplosDeTres);
+
+    // Contar repeticiones
+    $repetidos = array_count_values($union);
+
+    // Contar impares
+    $count_impares = count($impares);
+
+    // ¿Algún múltiplo de 5?
+    $any_mult5 = array_any($union, fn($v) => $v % 5 === 0);
+
+    // Primos dentro de la unión
+    $primos = array_filter($union, fn($v) => esPrimo($v));
+    $primos = acomodaKeys($primos);
+
+    // Primera cifra doble
+    $first_double_same = array_find(
+        $union,
+        fn($v) => $v >= 10 && $v < 100 && intdiv($v, 10) === ($v % 10)
+    );
+
+    // Cuadrados
+    $squares = array_map(fn($v) => $v * $v, $union);
+
+    // Doble con array_walk
+    $walk = $union;
+    array_walk($walk, fn(&$v) => $v *= 2);
+
+    // !Intersección entre impares y múltiplos de tres
+    $intersect = array_intersect($impares, $multiplosDeTres);
+    //! Acomodo de las keys del nuevo array
+    $intersect = acomodaKeys($intersect);
+
+    /* Resultados */
+    ?>
+
+    <h2>Arrays generados</h2>
+    <p><strong>Impares:</strong> <?= implode(', ', $impares) ?></p>
+    <p><strong>Múltiplos de 3:</strong> <?= implode(', ', $multiplosDeTres) ?></p>
+
+    <h2>Resultados del ejercicio</h2>
+    <p><strong>Cantidad de impares:</strong> <?= $count_impares ?></p>
+    <p><strong>Alguno múltiplo de 5:</strong> <?= $any_mult5 ? 'Sí' : 'No' ?></p>
+    <p><strong>Primos en la unión:</strong> <?= implode(', ', $primos) ?></p>
+    <p><strong>Primera doble cifra idéntica:</strong> <?= $first_double_same ?? 'No hay' ?></p>
+    <p><strong>Cuadrados (primeros 10):</strong> <?= implode(', ', array_slice($squares, 0, 10)) ?></p>
+    <p><strong>Doblados (primeros 10):</strong> <?= implode(', ', array_slice($walk, 0, 10)) ?></p>
+
+    <h2>Intersección entre impares y múltiplos de 3</h2>
+    <p><?= empty($intersect) ? 'Ninguno' : implode(', ', $intersect) ?></p>
+
+    <h2>Repeticiones en la unión</h2>
+    <?php mostrarArrayLista($repetidos); ?>
 
 </body>
 

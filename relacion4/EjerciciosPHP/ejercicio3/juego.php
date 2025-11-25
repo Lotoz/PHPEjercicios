@@ -5,52 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivina numero</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="p-4">
+
     <?php
+    //* Al usar el metodo get vemos el numeor aleatorio, pero es mas divertido cuando usamos post porque este no se ve
 
-    function genaraNumber(&$aleatorio)
-    {
-        if ($aleatorio == null) {
-            $aleatorio = rand(1, 100);
-            return $aleatorio;
-        }
-        return $aleatorio;
+    // Detectamos si el evento estaba antes declarado
+    $aleatorio = isset($_GET['aleatorio']) ? (int)$_GET['aleatorio'] : null;
+
+    // si no estaba declarado, valdra null, por ende le damos el valor
+    if ($aleatorio === null) {
+        $aleatorio = rand(1, 100);
     }
-    // Se sobreescribe siempre, buscar algun modo de que no se sobreescriba
-    $aleatorio = genaraNumber($aleatorio);
 
-    if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-        $numUser = $_REQUEST['numUser'];
+    // Inicio de las variables para mensajes de ayuda e inicio
+    $mensaje = "Introduce un número para comenzar...";
+    $color = "alert-info";
+
+    if (isset($_GET['numUser']) && $_GET['numUser'] !== "") {
+        $numUser = (int)$_GET['numUser'];
+
         if ($numUser == $aleatorio) {
-            $mensaje = 'Has ganado! Si quieres jugar de nuevo ingresa otro numero.';
-            $color = 'alert-success';
+            $mensaje = "Has acertado. El número era $aleatorio. Recarga la página para jugar de nuevo.";
+            $color = "alert-success";
+        } elseif ($numUser > $aleatorio) {
+            $mensaje = "Te has pasado.";
+            $color = "alert-danger";
         } else {
-            if ($numUser > $aleatorio) {
-                $mensaje = 'Te has pasado.';
-                $color = 'alert-danger';
-            } else {
-                $mensaje = 'Te has quedado corto.';
-                $color = 'alert-warning';
-            }
+            $mensaje = "Te has quedado corto.";
+            $color = "alert-warning";
         }
     }
     ?>
-    <div class="container-fluid w-50 m-25">
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="get">
-            <label for="numUser">Ingresa el numero que pienses que es:</label>
-            <input type="number" name="numUser" id="numUser">
-            <!--Input secreto donde se genera el numero aleatorio-->
-            <input type="hidden" name="aleatorio" value='<?php echo $aleatorio; ?>'>
-            <button type="submit" id='enviar'>Enviar</button>
-        </form>
-        <div class='alert <?php echo $color; ?> ' role=' alert'>
-            <p><?php echo $mensaje . "<br>";
-                echo $aleatorio; ?></p>
 
+    <div class="container w-50">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="get" class="mb-3">
+            <label for="numUser" class="form-label">Ingresa un número:</label>
+            <input type="number" name="numUser" id="numUser" class="form-control" autofocus>
+
+            <!-- Número secreto persistente -->
+            <input type="hidden" name="aleatorio" value="<?= $aleatorio ?>">
+
+            <button type="submit" class="btn btn-primary mt-3">Enviar</button>
+        </form>
+
+        <div class="alert <?= $color ?>" role="alert">
+            <?= $mensaje ?>
         </div>
     </div>
 

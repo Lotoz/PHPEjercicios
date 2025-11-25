@@ -67,42 +67,37 @@
             </div>
         </nav>
     </div>
+
     <div class="presentacion m-50 p-5">
         <!--Presentacion mia breve y de la pagina-->
-        <h1 class="mb-3 text-center titulos">Relacion 4</h1>
-        <p class=" mb-3p-2 text-center">Se ha trabajado entorno a cookies, seguridad y clases en php.</p>
+        <h1 class="mb-3 text-center titulos">Relacion 3</h1>
+        <p class=" mb-3p-2 text-center">Las primeras relaciones en PHP. Se trabajo ...</p>
     </div>
     <div>
         <ul class="list-group text-center">
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/tree/main/relacion4/EjerciciosPHP/ejercicio1">Ejercicio
-                    1</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/tree/main/relacion4/EjerciciosPHP/ejercicio2">Ejercicio
-                    2</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/tree/main/relacion4/EjerciciosPHP/ejercicio3">Ejercicio
-                    3</a></li>
-            <li><a href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion4/EjerciciosPHP/ejercicio4/juego.php">Ejercicio
-                    4</a></li>
-            <li><a href="">Ejercicio 5</a></li>
-            <li><a href="">Ejercicio 6</a></li>
-            <li><a href="">Ejercicio 7</a></li>
-            <li><a href="">Ejercicio 8_9</a></li>
-            <li><a
-                    href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion4/EjerciciosPHP/ejercicio10/Encendible.php">Ejercicio
-                    10</a></li>
-            <li><a
-                    href="https://github.com/Lotoz/PHPEjercicios/blob/main/relacion4/EjerciciosPHP/ejercicio11/moduloDWES.php">Ejercicio
-                    11</a></li>
-            <li><a href="">Ejercicio 12</a></li>
-            <li><a href="">Ejercicio 13</a></li>
-            <li><a href="">Ejercicio 14</a></li>
-            <li><a href="">Ejercicio 15</a></li>
-            <li><a href="">Ejercicio 16</a></li>
-            <li><a href="">Ejercicio 17</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio1.php">Ejercicio 1</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio2.php">Ejercicio 2</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio3.php">Ejercicio 3</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio6.php">Ejercicio 6</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio7.php">Ejercicio 7</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio8.php">Ejercicio 8</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio9.php">Ejercicio 9</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio10.php">Ejercicio 10</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio11.php">Ejercicio 11</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio12.php">Ejercicio 12</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio13.php">Ejercicio 13</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio14.php">Ejercicio 14</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio15.php">Ejercicio 15</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio16.php">Ejercicio 16</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio17.php">Ejercicio 17</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio18_19/ejercicio18_19_menu.php">Ejercicio 18 y 19</a></li>
+            <li><a href="./ejerciciosPHP/ejercicio20.php">Ejercicio 20</a></li>
         </ul>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
